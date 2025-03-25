@@ -1,76 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Besche Awdir</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        section {
-            margin: 20px 0;
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .project {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        footer {
-            background-color: #f0f0f0;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Besche Awdir</title>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+      background-color: #7baaf7;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+     flex: 1; /* This makes the main content take up available space */
+    }
+    header {
+      background-color: #4542f6;
+      padding: 20px;
+      text-align: center;
+      color: aliceblue;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      color: aliceblue;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+      color: aliceblue;
+    }
+    section {
+      color: aliceblue;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      color: aliceblue;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .project {
+      border: 1px solid #2a7cff;
+      border-radius: 50%;
+      background-color: #2a7cff;
+      padding: 10px;
+      text-align: center;
+      color: aliceblue;
+    }
+    .project img {
+      width: 125px;
+      height: 125px;
+      border-radius: 15%;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #3d00d7;
+      padding: 10px;
+      text-align: center;
+      color: aliceblue;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Besche Awdir</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#links">Links</a></li>
-        </ul>
-    </nav>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <!-- Repeat this div for each project with relevant information -->
-            <div class="project">
-                <h3>Project Title</h3>
-                <p>Project description here.</p>
-            </div>
-            <!-- Example Project End -->
-        </div>
-    </section>
-    <section id="links">
-        <h2>Useful Links</h2>
-        <ul>
-            <!-- Repeat this list item for each link -->
-            <li><a href="https://example.com">Link Name</a></li>
-            <!-- Example Link End -->
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2024 Besche Awdir. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1>Besche Awdir</h1>
+  </header>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <!-- Project 1 -->
+      <div class="project">
+        <!-- Icon linking to the detailed project page -->
+        <h3>Calorie Rush: The Marathon</h3>   
+        <a href="UnityProjects/CalorieRush/calorie-rush-details.html">
+          <img src="UnityProjects/CalorieRush/resources/photos/Icon1.png" alt="Calorie Rush Icon">
+        </a>
+        <p>Mobile Game (IOS)</p>  
+      </div>
+      <!-- Project 2 -->
+      <div class="project">
+
+        <h3>DungeonVerse</h3>        
+        <a href="UnityProjects/DungeonVerse/dungeonverse-details.html">
+          <img src="UnityProjects/DungeonVerse/resources/photos/DungeonVerse.png" alt="DungeonVerse Icon">
+        </a>
+        <p>Mobile Game (Android & IOS)</p>
+      </div>
+      <!-- Project 3 -->
+      <div class="project">
+
+        <h3>Sadame</h3>
+        <a href="UnityProjects/Sadame/sadame-details.html">
+            <img src="UnityProjects/Sadame/resources/photos/SadameConceptArt2.png" alt="Calorie Rush Icon">
+        </a>
+        <p>Game Concept</p>
+      </div>
+    </div>
+  </section>
+  </section>
+  <footer>
+    <p>&copy; 2024 Besche Awdir. All rights reserved.</p>
+  </footer>
 </body>
 </html>
