@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="Web-INF/javascript/scroller.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Besche Awdir</title>
   <style>
-    body {
-      font-family: Helvetica, sans-serif;
-      background-color: #7baaf7;
-    }
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    main {
-     flex: 1; /* This makes the main content take up available space */
-    }
-    header {
-      background-color: #4542f6;
-      padding: 20px;
-      text-align: center;
-      color: aliceblue;
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      color: aliceblue;
-    }
-    nav ul li {
-      display: inline;
-      margin-right: 10px;
-      color: aliceblue;
-    }
-    section {
-      color: aliceblue;
-      margin-left: 40px;
-      margin-right: 40px;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      color: aliceblue;
-      margin-left: 40px;
-      margin-right: 40px;
-    }
-    .project {
-      border: 1px solid #2a7cff;
-      border-radius: 50%;
-      background-color: #2a7cff;
-      padding: 10px;
-      text-align: center;
-      color: aliceblue;
-    }
-    .project img {
-      width: 125px;
-      height: 125px;
-      border-radius: 15%;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    footer {
-      background-color: #3d00d7;
-      padding: 10px;
-      text-align: center;
-      color: aliceblue;
-      margin-top: auto;
-    }
+  body {
+    font-family: Helvetica, sans-serif;
+    background-color: #4542f6;
+    margin: 0 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  html, body {
+    height: 100%;
+  }
+  header {
+    background-color: #4542f6;
+    padding: 30px;
+    text-align: center;
+    color: aliceblue;
+  }
+  section {
+    margin: 0 0;
+  }
+  footer {
+    background-color: #3d00d7;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    flex: 1;
+  }
+  /* Projects Section Layout - removed horizontal margins */
+  #projects {
+    margin: 0; /* or adjust as needed */
+    text-align: center;
+  }
+  /* Carousel Container */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* full width */
+  }
+  
+  /* Carousel - flex container holding project cards */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Individual Project Cards - removed horizontal margins */
+  .project {
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 calc(100% / 3);
+    box-sizing: border-box;
+  }
+  
+  /* Images fill width and maintain square ratio */
+  .project img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Navigation Buttons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
   </style>
 </head>
 <body>
@@ -79,37 +106,35 @@
     <h1>Besche Awdir</h1>
   </header>
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <!-- Project 1 -->
-      <div class="project">
-        <!-- Icon linking to the detailed project page -->
-        <h3>Calorie Rush: The Marathon</h3>   
-        <a href="UnityProjects/CalorieRush/calorie-rush-details.html">
-          <img src="UnityProjects/CalorieRush/resources/photos/Icon1.png" alt="Calorie Rush Icon">
-        </a>
-        <p>Mobile Game (IOS)</p>  
+    <h1>Projects</h1>
+    <div class="carousel-container">
+      <button class="nav-btn prev-btn">&larr;</button>
+      <div class="carousel">
+        <div class="project">
+          <a href="UnityProjects/CalorieRush/calorie-rush-details.html">
+            <img src="UnityProjects/CalorieRush/resources/photos/Icon1.png" alt="Calorie Rush Icon">
+          </a>          
+          <h3>Calorie Rush: The Marathon</h3>   
+          <p>Mobile Game (IOS)</p>  
+        </div>
+        <div class="project">
+          <a href="UnityProjects/DungeonVerse/dungeonverse-details.html">
+            <img src="UnityProjects/DungeonVerse/resources/photos/DungeonVerse.png" alt="DungeonVerse Icon">
+          </a>          
+          <h3>DungeonVerse</h3>        
+          <p>Mobile Game (Android & IOS)</p>
+        </div>
+        <div class="project">
+          <a href="UnityProjects/Sadame/sadame-details.html">
+            <img src="UnityProjects/Sadame/resources/photos/SadameConceptArt2.png" alt="Sadame Icon">
+          </a>          
+          <h3>Sadame</h3>
+          <p>Game Concept</p>
+        </div>
+        <!-- Additional project elements can be added here -->
       </div>
-      <!-- Project 2 -->
-      <div class="project">
-
-        <h3>DungeonVerse</h3>        
-        <a href="UnityProjects/DungeonVerse/dungeonverse-details.html">
-          <img src="UnityProjects/DungeonVerse/resources/photos/DungeonVerse.png" alt="DungeonVerse Icon">
-        </a>
-        <p>Mobile Game (Android & IOS)</p>
-      </div>
-      <!-- Project 3 -->
-      <div class="project">
-
-        <h3>Sadame</h3>
-        <a href="UnityProjects/Sadame/sadame-details.html">
-            <img src="UnityProjects/Sadame/resources/photos/SadameConceptArt2.png" alt="Calorie Rush Icon">
-        </a>
-        <p>Game Concept</p>
-      </div>
+      <button class="nav-btn next-btn">&rarr;</button>
     </div>
-  </section>
   </section>
   <footer>
     <p>&copy; 2024 Besche Awdir. All rights reserved.</p>
