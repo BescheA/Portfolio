@@ -1,0 +1,173 @@
+.project-header {
+    padding: 120px 0 60px;
+    background-size: cover;
+    background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(13, 13, 26, 0.9));
+    text-align: center;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    z-index: 10;
+}
+
+.project-title {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-meta {
+    margin-bottom: 40px;
+}
+
+.project-category {
+    display: inline-block;
+    background: rgba(255, 209, 102, 0.2);
+    color: var(--accent);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-stats .stat {
+    font-size: 1rem;
+    color: var(--light);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+.project-content {
+    padding: 80px 0;
+}
+
+.project-overview,
+.project-features,
+.project-gallery,
+.project-video {
+    margin-bottom: 60px;
+}
+
+.project-overview h2,
+.project-features h2,
+.project-gallery h2,
+.project-video h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.project-overview h2::after,
+.project-features h2::after,
+.project-gallery h2::after,
+.project-video h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+}
+
+.project-overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--light);
+}
+
+.project-features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-features li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--light);
+}
+
+.project-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: var(--pixel-border);
+    transition: var(--transition);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: var(--pixel-border);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .project-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+}
